@@ -1,184 +1,352 @@
--- b00kiddGUI FIXED
+-- Gui to Lua
+-- Version: 3.2
 
-local Players = game:GetService("Players")
-local RunService = game:GetService("RunService")
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local b00kiddgui = Instance.new("TextLabel")
+local ImageLabel = Instance.new("ImageLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local TextButton_3 = Instance.new("TextButton")
+local TextButton_4 = Instance.new("TextButton")
+local TextButton_5 = Instance.new("TextButton")
+local TextButton_6 = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.623705387, -93, 0.234927237, -22)
+Frame.Size = UDim2.new(0, 204, 0, 254)
+
+b00kiddgui.Name = "b00kiddgui"
+b00kiddgui.Parent = Frame
+b00kiddgui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+b00kiddgui.BackgroundTransparency = 1.000
+b00kiddgui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+b00kiddgui.BorderSizePixel = 0
+b00kiddgui.Position = UDim2.new(-0.205882356, 0, -0.145669296, 0)
+b00kiddgui.Size = UDim2.new(0, 200, 0, 37)
+b00kiddgui.Font = Enum.Font.Unknown
+b00kiddgui.LineHeight = 0.000
+b00kiddgui.Text = "b00kiddgui"
+b00kiddgui.TextColor3 = Color3.fromRGB(0, 0, 0)
+b00kiddgui.TextScaled = true
+b00kiddgui.TextSize = 14.000
+b00kiddgui.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(-0.490196079, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 100, 0, 254)
+ImageLabel.Image = "rbxassetid://109563692063239"
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+TextButton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Size = UDim2.new(0, 200, 0, 50)
+TextButton.Font = Enum.Font.Unknown
+TextButton.Text = "Hint"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = Frame
+TextButton_2.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+TextButton_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0.196850389, 0)
+TextButton_2.Size = UDim2.new(0, 200, 0, 50)
+TextButton_2.Font = Enum.Font.Unknown
+TextButton_2.Text = "Rain Balls"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+TextButton_3.Parent = Frame
+TextButton_3.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+TextButton_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.BorderSizePixel = 0
+TextButton_3.Position = UDim2.new(0, 0, 0.40157479, 0)
+TextButton_3.Size = UDim2.new(0, 200, 0, 50)
+TextButton_3.Font = Enum.Font.Unknown
+TextButton_3.Text = "PlaceHolder"
+TextButton_3.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_3.TextScaled = true
+TextButton_3.TextSize = 14.000
+TextButton_3.TextWrapped = true
+
+TextButton_4.Parent = Frame
+TextButton_4.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+TextButton_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.BorderSizePixel = 0
+TextButton_4.Position = UDim2.new(0.0196078438, 0, 0.59842521, 0)
+TextButton_4.Size = UDim2.new(0, 200, 0, 50)
+TextButton_4.Font = Enum.Font.Unknown
+TextButton_4.Text = "PlaceHolder"
+TextButton_4.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_4.TextScaled = true
+TextButton_4.TextSize = 14.000
+TextButton_4.TextWrapped = true
+
+TextButton_5.Parent = Frame
+TextButton_5.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+TextButton_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.BorderSizePixel = 0
+TextButton_5.Position = UDim2.new(0.0196078438, 0, 0.795275569, 0)
+TextButton_5.Size = UDim2.new(0, 200, 0, 50)
+TextButton_5.Font = Enum.Font.Unknown
+TextButton_5.Text = "PlaceHolder"
+TextButton_5.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_5.TextScaled = true
+TextButton_5.TextSize = 14.000
+TextButton_5.TextWrapped = true
+
+TextButton_6.Parent = Frame
+TextButton_6.BackgroundColor3 = Color3.fromRGB(1, 101, 31)
+TextButton_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.BorderSizePixel = 0
+TextButton_6.Position = UDim2.new(1.05882359, 0, 0.196850389, 0)
+TextButton_6.Size = UDim2.new(0, 67, 0, 121)
+TextButton_6.Font = Enum.Font.Unknown
+TextButton_6.Text = ">"
+TextButton_6.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_6.TextScaled = true
+TextButton_6.TextSize = 14.000
+TextButton_6.TextWrapped = true
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local showHint = ReplicatedStorage:WaitForChild("HintEvent")
+
+showHint.OnServerEvent:Connect(function(player)
+	local hint = Instance.new("Hint")
+	hint.Parent = game.Workspace
+	hint.Text = "Join team b00kidd today!"
+
+	wait(5)
+	hint:Destroy()
+end)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local button = script.Parent
+local showHint = ReplicatedStorage:WaitForChild("HintEvent")
+
+button.MouseButton1Click:Connect(function()
+	showHint:FireServer()
+end)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
+local Lighting = game:GetService("Lighting")
+local Debris = game:GetService("Debris")
 
-local player = Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
+local startEvent = ReplicatedStorage:WaitForChild("StartRainingBalls")
 
--- wait for root part safely
-local function getRoot(char)
-	return char:WaitForChild("HumanoidRootPart")
+local raining = false
+local spawnedBalls = {}
+local floor = Workspace:FindFirstChild("Baseplate")
+local skyPart
+
+-- Store original lighting/floor/sky
+local originalLighting = {
+	TimeOfDay = Lighting.TimeOfDay,
+	Ambient = Lighting.Ambient,
+	OutdoorAmbient = Lighting.OutdoorAmbient,
+	FogColor = Lighting.FogColor,
+	FogEnd = Lighting.FogEnd,
+	Brightness = Lighting.Brightness,
+}
+local originalFloorColor = floor and floor.Color
+local originalFloorMaterial = floor and floor.Material
+local originalSky = Lighting:FindFirstChildOfClass("Sky")
+
+-- Random royal green tinted color
+local function randomRoyalTint()
+	local baseColor = Color3.fromHSV(math.random(),1,1)
+	local royalGreen = Color3.fromRGB(65,105,225)
+	return Color3.new(
+		(baseColor.R + royalGreen.R)/2,
+		(baseColor.G + royalGreen.G)/2,
+		(baseColor.B + royalGreen.B)/2
+	)
 end
 
--- GUI (use CoreGui so it doesn't disappear)
-local gui = Instance.new("ScreenGui")
-gui.Name = "b00kiddGUI"
-gui.Parent = game:GetService("CoreGui")
+-- Spawn one falling ball (on fire)
+local function spawnBall()
+	local ball = Instance.new("Part")
+	ball.Shape = Enum.PartType.Ball
+	local sizeValue = math.random(100,300)
+	ball.Size = Vector3.new(sizeValue,sizeValue,sizeValue)
+	ball.Position = Vector3.new(math.random(-500,500),500,math.random(-500,500))
+	ball.Anchored = false
+	ball.CanCollide = true
+	ball.Material = Enum.Material.Neon
+	ball.Color = randomRoyalTint()
 
-local frame = Instance.new("Frame", gui)
-frame.Size = UDim2.new(0,420,0,400)
-frame.Position = UDim2.new(0.5,-210,0.5,-200)
-frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
-frame.Active = true
-frame.Draggable = true
+	local fire = Instance.new("Fire")
+	fire.Parent = ball
+	fire.Heat = 20
+	fire.Size = sizeValue/1.5
+	fire.Color = Color3.fromRGB(65,105,225)
+	fire.SecondaryColor = Color3.fromRGB(255,255,255)
 
-local title = Instance.new("TextLabel", frame)
-title.Size = UDim2.new(1,0,0,30)
-title.Text = "b00kiddGUI test"
-title.BackgroundColor3 = Color3.fromRGB(40,40,40)
-title.TextColor3 = Color3.new(1,1,1)
+	ball.Parent = Workspace
+	table.insert(spawnedBalls, ball)
 
-local container = Instance.new("Frame", frame)
-container.Size = UDim2.new(1,0,1,-60)
-container.Position = UDim2.new(0,0,0,30)
-container.BackgroundTransparency = 1
-
-local pageLabel = Instance.new("TextLabel", frame)
-pageLabel.Size = UDim2.new(0,200,0,25)
-pageLabel.Position = UDim2.new(0.5,-100,1,-30)
-pageLabel.TextColor3 = Color3.new(1,1,1)
-pageLabel.BackgroundTransparency = 1
-
-local prev = Instance.new("TextButton", frame)
-prev.Size = UDim2.new(0,50,0,25)
-prev.Position = UDim2.new(0,10,1,-30)
-prev.Text = "<"
-
-local next = Instance.new("TextButton", frame)
-next.Size = UDim2.new(0,50,0,25)
-next.Position = UDim2.new(1,-60,1,-30)
-next.Text = ">"
-
--- Pages
-local pages = {}
-local currentPage = 1
-local modsPerPage = 6
-
-local function newPage()
-	local p = Instance.new("Frame", container)
-	p.Size = UDim2.new(1,0,1,0)
-	p.BackgroundTransparency = 1
-	p.Visible = false
-	table.insert(pages, p)
-	return p
+	-- Auto cleanup
+	Debris:AddItem(ball,5)
 end
 
-local function button(parent,text,y,func)
-	local b = Instance.new("TextButton", parent)
-	b.Size = UDim2.new(0.8,0,0,30)
-	b.Position = UDim2.new(0.1,0,0,y)
-	b.Text = text
-	b.BackgroundColor3 = Color3.fromRGB(60,60,60)
-	b.TextColor3 = Color3.new(1,1,1)
-	b.MouseButton1Click:Connect(function()
-		pcall(func) -- prevent crashes
-	end)
+-- Random explosions
+local function spawnExplosion()
+	local part = Instance.new("Part")
+	part.Size = Vector3.new(2,2,2)
+	part.Anchored = true
+	part.CanCollide = false
+	part.Transparency = 1
+	part.Position = Vector3.new(math.random(-500,500),math.random(50,300),math.random(-500,500))
+	part.Parent = Workspace
+
+	local explosion = Instance.new("Explosion")
+	explosion.Position = part.Position
+	explosion.BlastRadius = 30
+	explosion.BlastPressure = 0
+	explosion.ExplosionType = Enum.ExplosionType.NoCraters
+	explosion.Parent = Workspace
+
+	Debris:AddItem(part,2)
 end
 
--- ===== MODS =====
-local mods = {}
+-- Firework text “b00kidd1x1”
+local function spawnFireworkText()
+	local textPart = Instance.new("Part")
+	textPart.Size = Vector3.new(2,2,2)
+	textPart.Anchored = true
+	textPart.CanCollide = false
+	textPart.Transparency = 1
+	textPart.Position = Vector3.new(math.random(-500,500),math.random(100,500),math.random(-500,500))
+	textPart.Parent = Workspace
 
-local function orbitPart(target, radius, speed, color)
-	local p = Instance.new("Part")
-	p.Size = Vector3.new(2,2,2)
-	p.Anchored = true
-	p.CanCollide = false
-	p.BrickColor = BrickColor.new(color)
-	p.Parent = Workspace
+	local billboard = Instance.new("BillboardGui")
+	billboard.Adornee = textPart
+	billboard.Size = UDim2.new(0,400,0,100)
+	billboard.AlwaysOnTop = true
+	billboard.Parent = textPart
 
-	return RunService.RenderStepped:Connect(function()
-		if target and target.Parent then
-			p.Position = target.Position + Vector3.new(
-				math.sin(tick()*speed)*radius,
-				radius/2,
-				math.cos(tick()*speed)*radius
-			)
-		end
-	end)
+	local label = Instance.new("TextLabel")
+	label.Text = "b00kidd1x1"
+	label.BackgroundTransparency = 1
+	label.TextColor3 = Color3.fromRGB(255,255,255)
+	label.TextScaled = true
+	label.Font = Enum.Font.Bangers
+	label.Parent = billboard
+
+	Debris:AddItem(textPart,3)
 end
 
--- Orbit self
-for i=1,25 do
-	table.insert(mods,{
-		"Orbit Self "..i,
-		function()
-			local root = getRoot(character)
-			return orbitPart(root,5+i,2+i,"Bright red")
-		end
-	})
+-- Spawn giant BOO! in sky
+local function spawnBooSky()
+	skyPart = Instance.new("Part")
+	skyPart.Size = Vector3.new(20,1,20)
+	skyPart.Anchored = true
+	skyPart.CanCollide = false
+	skyPart.Position = Vector3.new(0,500,0)
+	skyPart.Transparency = 1
+	skyPart.Parent = Workspace
+
+	local billboard = Instance.new("BillboardGui")
+	billboard.Adornee = skyPart
+	billboard.Size = UDim2.new(0,1500,0,800)
+	billboard.AlwaysOnTop = true
+	billboard.Parent = skyPart
+
+	local label = Instance.new("TextLabel")
+	label.Text = "BOO!"
+	label.BackgroundTransparency = 1
+	label.TextColor3 = Color3.fromRGB(255,255,255)
+	label.TextScaled = true
+	label.Font = Enum.Font.Bangers
+	label.Parent = billboard
 end
 
--- Orbit random player
-for i=1,25 do
-	table.insert(mods,{
-		"Orbit Random "..i,
-		function()
-			local plrs = Players:GetPlayers()
-			local target = plrs[math.random(1,#plrs)]
-			if target.Character then
-				local root = target.Character:FindFirstChild("HumanoidRootPart")
-				if root then
-					return orbitPart(root,5+i,1+i,"Bright blue")
-				end
-			end
-		end
-	})
-end
+-- Start chaotic raining + sky
+local function startRaining()
+	if raining then return end
+	raining = true
 
--- Exploding parts
-for i=1,10 do
-	table.insert(mods,{
-		"Explosion "..i,
-		function()
-			local root = getRoot(character)
-			local p = Instance.new("Part")
-			p.Size = Vector3.new(3,3,3)
-			p.Anchored = true
-			p.CanCollide = false
-			p.BrickColor = BrickColor.Random()
-			p.Position = root.Position + Vector3.new(math.random(-20,20),10,math.random(-20,20))
-			p.Parent = Workspace
+	-- Royal green lighting
+	Lighting.TimeOfDay = "00:00:00"
+	Lighting.Ambient = Color3.fromRGB(65,105,225)
+	Lighting.OutdoorAmbient = Color3.fromRGB(65,105,225)
+	Lighting.FogColor = Color3.fromRGB(65,105,225)
+	Lighting.FogEnd = 1000
+	Lighting.Brightness = 5
 
-			game:GetService("Debris"):AddItem(p,5)
-
-			local explosion = Instance.new("Explosion")
-			explosion.Position = p.Position
-			explosion.BlastRadius = 10
-			explosion.Parent = Workspace
-		end
-	})
-end
-
--- ===== BUILD PAGES =====
-local currentPageObj
-for i,mod in ipairs(mods) do
-	if (i-1) % modsPerPage == 0 then
-		currentPageObj = newPage()
+	-- Floor royal green
+	if floor then
+		floor.Color = Color3.fromRGB(65,105,225)
+		floor.Material = Enum.Material.Neon
 	end
-	local y = ((i-1) % modsPerPage) * 40
-	button(currentPageObj,mod[1],y,mod[2])
+
+	-- Giant BOO! in sky
+	spawnBooSky()
+
+	-- Spawn loop
+	coroutine.wrap(function()
+		while raining do
+			for i=1,5 do spawnBall() end
+			for i=1,3 do spawnExplosion() end
+			if math.random() < 0.1 then spawnFireworkText() end
+			wait(0.05)
+		end
+	end)()
 end
 
--- Page system
-local function updatePages()
-	for i,p in pairs(pages) do
-		p.Visible = (i==currentPage)
+-- Stop raining and restore world
+local function stopRaining()
+	raining = false
+
+	-- Destroy all balls
+	for _,ball in pairs(spawnedBalls) do
+		if ball and ball.Parent then ball:Destroy() end
 	end
-	pageLabel.Text = "Page "..currentPage.." / "..#pages
+	spawnedBalls = {}
+
+	-- Destroy BOO! sky
+	if skyPart and skyPart.Parent then skyPart:Destroy() end
+
+	-- Restore lighting
+	Lighting.TimeOfDay = originalLighting.TimeOfDay
+	Lighting.Ambient = originalLighting.Ambient
+	Lighting.OutdoorAmbient = originalLighting.OutdoorAmbient
+	Lighting.FogColor = originalLighting.FogColor
+	Lighting.FogEnd = originalLighting.FogEnd
+	Lighting.Brightness = originalLighting.Brightness
+
+	-- Restore floor
+	if floor then
+		floor.Color = originalFloorColor
+		floor.Material = originalFloorMaterial
+	end
 end
 
-prev.MouseButton1Click:Connect(function()
-	currentPage = currentPage - 1
-	if currentPage < 1 then currentPage = #pages end
-	updatePages()
+-- Toggle
+startEvent.OnServerEvent:Connect(function(player)
+	if raining then stopRaining() else startRaining() end
 end)
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local button = script.Parent
+local startEvent = ReplicatedStorage:WaitForChild("StartRainingBalls")
 
-next.MouseButton1Click:Connect(function()
-	currentPage = currentPage + 1
-	if currentPage > #pages then currentPage = 1 end
-	updatePages()
+button.MouseButton1Click:Connect(function()
+	startEvent:FireServer()
 end)
-
-updatePages()
